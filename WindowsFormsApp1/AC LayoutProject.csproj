@@ -138,6 +138,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="exe\release.zip" />
     <None Include="LayoutProject_TemporaryKey.pfx" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
