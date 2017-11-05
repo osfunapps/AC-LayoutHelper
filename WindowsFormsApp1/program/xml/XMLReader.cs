@@ -52,6 +52,7 @@ namespace LayoutProject.program
             XmlNodeList keysNodesList = keysNode.ChildNodes;
             namesStripNodesList = new List<XmlElement>();
             List<string> namesList = new List<string>();
+            bool remoteHasDisplay = CheckIfDisplayExists(keysNodesList);
 
             foreach (XmlElement keyNode in keysNodesList)
             {
@@ -63,14 +64,27 @@ namespace LayoutProject.program
                 namesStripNodesList.Add(keyNode);
                 nodeName = nodeName.Replace(SCREEN_ELEMENT, "");
                 //keyNode.SetAttribute(XMLPreparer.ATT_NAME, nodeName);
-                
+
+                if (remoteHasDisplay) { 
                 genericItemsList.Add(keyNode);
                 if (nodeName.Contains(POWER)) nodeName = POWER;
+                }
                 namesList.Add(nodeName);
 
             }
 
             return namesList.ToArray();
+        }
+
+        private bool CheckIfDisplayExists(XmlNodeList keysNodesList)
+        {
+            foreach (XmlNode node in keysNodesList)
+            {
+                if (node.Attributes[XMLPreparer.ATT_NAME].Value.Contains(LastMinuteWrapper.AC_DISPLAY))
+                    return true;
+            }
+            return false;
+
         }
 
         public void stripNodesNames()

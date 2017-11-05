@@ -5,8 +5,7 @@ namespace LayoutProject.program
 {
     internal class LastMinuteWrapper
     {
-
-        private string AC_DISPLAY = "ac_display";
+        public static string AC_DISPLAY = "ac_display";
         private string TAG_KEY = "key";
         private string HEX = "hex";
         private string ATT_TYPE = "type";

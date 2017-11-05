@@ -7,12 +7,15 @@ namespace LayoutProject
         internal static string GetTxt()
         {
             return
-                "Version 1.5" +
+                "Version 1.6" +
+                "\n- helper now supports ac remotes without display" +
+                "\n- shared prefs made to all user inputs" +
+                "\n\nVersion 1.5" +
                 "\n- fixed screen rect element" +
                 "\n\nVersion 1.4" +
-                "\n - added vertifaction btn" +
+                "\n- added vertifaction btn" +
                 "\n\nVersion 1.3" +
-                "\n - minor bug fixes with the config file" +
+                "\n- minor bug fixes with the config file" +
                 "\n\nVersion 1.2" +
                 "\n- added tinyPng support. Produce api key and use it:" +
                 "\n- if you only want to use tiny png compressor, keep the xml path empty!" +

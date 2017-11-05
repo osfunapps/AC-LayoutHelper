@@ -30,14 +30,19 @@ namespace LayoutProject
             setInstances();
             InitializeComponent();
             setValidationCBItems();
-            loadPreviousParams();
+            LoadPreviousParams();
 
         }
 
-        private void loadPreviousParams()
+        private void LoadPreviousParams()
         {
             apiKeyTB.Text = Settings.Default.APIKey;
             pythonPathTB.Text = Settings.Default.PythonPath;
+            xmlPathTB.Text = Settings.Default.xmlPath;
+            remotePathTB.Text = Settings.Default.remotePath;
+            validationBtnCB.Text = Settings.Default.validationBtn;
+            tinyPngCompressionCB.Checked = Settings.Default.tinyPngBox;
+
         }
 
 
@@ -149,11 +154,11 @@ namespace LayoutProject
         private void Go_Click(object sender, EventArgs e)
         {
             xmlPathStr = xmlPathTB.Text;
-
+            SaveParams();
             toCompress = tinyPngCompressionCB.Checked;
             remotePicPath = remotePathTB.Text;
-            if (validationCB.SelectedItem != null)
-                validationBtnName = validationCB.SelectedItem.ToString();
+            if (validationBtnCB.SelectedItem != null)
+                validationBtnName = validationBtnCB.SelectedItem.ToString();
 
             if (!xmlPathTB.Text.Equals(""))
                 initiator.RunPath(xmlPathStr, remotePicPath);
@@ -161,5 +166,14 @@ namespace LayoutProject
                 compressPic();
         }
 
+        private void SaveParams()
+        {
+            Settings.Default.Upgrade();
+            Settings.Default.xmlPath = xmlPathTB.Text;
+            Settings.Default.remotePath = remotePathTB.Text;
+            Settings.Default.validationBtn = validationBtnCB.Text;
+            Settings.Default.tinyPngBox = tinyPngCompressionCB.Checked;
+            Settings.Default.Save();
+        }
     }
 }

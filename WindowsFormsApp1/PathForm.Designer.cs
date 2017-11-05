@@ -53,7 +53,7 @@ namespace LayoutProject
             this.pythonPathDialog = new System.Windows.Forms.OpenFileDialog();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.validationCB = new System.Windows.Forms.ComboBox();
+            this.validationBtnCB = new System.Windows.Forms.ComboBox();
             this.tinyPngCB.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -244,13 +244,13 @@ namespace LayoutProject
             this.label5.TabIndex = 21;
             this.label5.Text = "With Validation Button";
             // 
-            // validationCB
+            // validationBtnCB
             // 
-            this.validationCB.FormattingEnabled = true;
-            this.validationCB.Location = new System.Drawing.Point(135, 104);
-            this.validationCB.Name = "validationCB";
-            this.validationCB.Size = new System.Drawing.Size(242, 21);
-            this.validationCB.TabIndex = 20;
+            this.validationBtnCB.FormattingEnabled = true;
+            this.validationBtnCB.Location = new System.Drawing.Point(135, 104);
+            this.validationBtnCB.Name = "validationBtnCB";
+            this.validationBtnCB.Size = new System.Drawing.Size(242, 21);
+            this.validationBtnCB.TabIndex = 20;
             // 
             // PathForm
             // 
@@ -259,7 +259,7 @@ namespace LayoutProject
             this.ClientSize = new System.Drawing.Size(486, 324);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.validationCB);
+            this.Controls.Add(this.validationBtnCB);
             this.Controls.Add(this.tinyPngCompressionCB);
             this.Controls.Add(this.tinyPngCB);
             this.Controls.Add(this.linkLabel1);
@@ -314,7 +314,7 @@ namespace LayoutProject
         protected void setValidationCBItems()
         {
             foreach (string btnName in Enum.GetNames(typeof(VirtualKeyCode)))
-                this.validationCB.Items.Add(btnName);
+                this.validationBtnCB.Items.Add(btnName);
         }
 
 
@@ -341,7 +341,7 @@ namespace LayoutProject
         private OpenFileDialog pythonPathDialog;
         private Label label4;
         private Label label5;
-        private ComboBox validationCB;
+        private ComboBox validationBtnCB;
     }
 }
 

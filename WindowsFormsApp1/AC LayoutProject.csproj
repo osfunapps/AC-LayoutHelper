@@ -101,6 +101,7 @@
       <DependentUpon>RemotePicFrame.cs</DependentUpon>
     </Compile>
     <Compile Include="program\Initiator.cs" />
+    <Compile Include="program\tools\UserSettings.cs" />
     <Compile Include="program\tools\VirtualKeyCode.cs" />
     <Compile Include="program\valuesparser\FloatingMouseWindow.cs">
       <SubType>Form</SubType>
@@ -137,9 +138,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="exe\release.zip" />
-    <None Include="LayoutProject_TemporaryKey.pfx" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

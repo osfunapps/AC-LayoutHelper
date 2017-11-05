@@ -46,5 +46,53 @@ namespace WindowsFormsApp1.Properties {
                 this["APIKey"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string xmlPath {
+            get {
+                return ((string)(this["xmlPath"]));
+            }
+            set {
+                this["xmlPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string remotePath {
+            get {
+                return ((string)(this["remotePath"]));
+            }
+            set {
+                this["remotePath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string validationBtn {
+            get {
+                return ((string)(this["validationBtn"]));
+            }
+            set {
+                this["validationBtn"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool tinyPngBox {
+            get {
+                return ((bool)(this["tinyPngBox"]));
+            }
+            set {
+                this["tinyPngBox"] = value;
+            }
+        }
     }
 }
