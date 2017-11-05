@@ -65,10 +65,10 @@ namespace LayoutProject.program
                 nodeName = nodeName.Replace(SCREEN_ELEMENT, "");
                 //keyNode.SetAttribute(XMLPreparer.ATT_NAME, nodeName);
 
-                if (remoteHasDisplay) { 
-                genericItemsList.Add(keyNode);
                 if (nodeName.Contains(POWER)) nodeName = POWER;
-                }
+
+                if (remoteHasDisplay)
+                    genericItemsList.Add(keyNode);
                 namesList.Add(nodeName);
 
             }
